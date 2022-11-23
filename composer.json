@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=7.3",
-        "guzzlehttp/guzzle": "~7.0.1",
+        "guzzlehttp/guzzle": "^7.2",
         "lstrojny/fxmlrpc": "^0.15.0",
         "psr/log": "~1.0",
         "laminas/laminas-diactoros": "^2.0",

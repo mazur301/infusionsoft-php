@@ -9,6 +9,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\MessageFormatter;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Middleware;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
 class GuzzleHttpClient extends Client implements ClientInterface
@@ -55,7 +56,7 @@ class GuzzleHttpClient extends Client implements ClientInterface
      * @return mixed
      * @throws HttpException
      */
-    public function request($method, $uri = null, array $options = [])
+    public function request(string $method, $uri = '', array $options = []): ResponseInterface
     {
         if ( ! isset($options['headers'])) {
             $options['headers'] = [];
